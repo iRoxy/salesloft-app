@@ -1,0 +1,15 @@
+{
+  "name": "salesloft-backend",
+  "version": "1.0.0",
+  "description": "Backend Node Server",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "author": "Raquel Lawrence",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.0"
+  }
+}
