@@ -13,14 +13,15 @@ router.get('/list-people', async (req, res) => {
     const auth = `Bearer ${API_KEY}`;
     console.log('THE AUTH: ', auth);
     let headers = {
+        "Content-Type": "application/json",
         "Authorization": auth
     };
 
      // Fetch a list of people
      let peopleData = await fetch(baseUrl, { method: "GET", headers });
      let peopleJson = await peopleData.json();
-     let peopleArr = peopleJson.data;
-     return peopleArr;
+     console.log(peopleJson);
+     return res.json(peopleJson.data);
 });
 
 // Register all the routers
